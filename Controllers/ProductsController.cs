@@ -15,5 +15,29 @@ namespace AspNetCoreWebAPI_Project.Controllers
 
         }
 
+        [HttpGet]
+        public IEnumerable<Product> GetProducts()
+        {
+            return _context.Products.ToList();
+        }
+
+        [HttpPost]
+
+        public IActionResult AddProduct(Product product)
+        {
+            try
+            {
+                _context.Products.Add(product);
+                _context.SaveChanges();
+                return StatusCode(StatusCodes.Status201Created, product);
+            }
+
+            catch (Exception) {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+
+        }
+
+
     }
 }
