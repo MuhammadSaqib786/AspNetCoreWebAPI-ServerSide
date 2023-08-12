@@ -38,6 +38,30 @@ namespace AspNetCoreWebAPI_Project.Controllers
 
         }
 
+        [HttpGet("{id}")]
+        public Product Get(int id) {
+            return _context.Products.Find(id);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateProduct(int id,Product product) {
+            try
+            {
+                if(id != product.ProductId)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest);
+                }
+                _context.Products.Update(product);
+                _context.SaveChanges();
+
+                return StatusCode(StatusCodes.Status200OK);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
 
     }
 }
