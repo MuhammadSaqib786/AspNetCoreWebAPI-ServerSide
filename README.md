@@ -1,56 +1,34 @@
+# ASP.NET Core Web API - Product Management
+
+A RESTful API built with ASP.NET Core MVC for managing products.
+
+## Features
+
+- CRUD operations for products.
+- Integrated with Entity Framework Core.
+- Proper error handling.
+
+## Getting Started
+
+### Prerequisites
+
+- .NET Core SDK
+- Database setup as per `ApplicationDbContext`
 
 
-<body>
+## API Endpoints
 
-    <h1>ASP.NET Core Web API - Product Management</h1>
-    <p>A RESTful API built with ASP.NET Core MVC for managing products.</p>
+- **All Products**: `GET /api/products`
+- **Add Product**: `POST /api/products`
+- **Product by ID**: `GET /api/products/{id}`
+- **Update Product**: `PUT /api/products/{id}`
+- **Delete Product**: `DELETE /api/products/{id}`
 
-    <h2>Features</h2>
-    <ul>
-        <li>CRUD operations for products.</li>
-        <li>Integrated with Entity Framework Core.</li>
-        <li>Proper error handling.</li>
-    </ul>
+## Contributing
 
-    <h2>Getting Started</h2>
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
 
-    <h3>Prerequisites</h3>
-    <ul>
-        <li>.NET Core SDK</li>
-        <li>Database setup as per <code>ApplicationDbContext</code></li>
-    </ul>
+## Contact
 
-    <h3>Setup</h3>
-    <ol>
-        <li>Clone the repo:
-            <pre><code>git clone https://github.com/MuhammadSaqib786/AspNetCoreWebAPI-Project.git</code></pre>
-        </li>
-        <li>Install dependencies:
-            <pre><code>dotnet restore</code></pre>
-        </li>
-        <li>Update the database:
-            <pre><code>dotnet ef database update</code></pre>
-        </li>
-        <li>Run:
-            <pre><code>dotnet run</code></pre>
-        </li>
-    </ol>
+Muhammad Saqib - [GitHub Profile](https://github.com/MuhammadSaqib786)
 
-    <h2>API Endpoints</h2>
-    <ul>
-        <li><strong>All Products</strong>: <code>GET /api/products</code></li>
-        <li><strong>Add Product</strong>: <code>POST /api/products</code></li>
-        <li><strong>Product by ID</strong>: <code>GET /api/products/{id}</code></li>
-        <li><strong>Update Product</strong>: <code>PUT /api/products/{id}</code></li>
-        <li><strong>Delete Product</strong>: <code>DELETE /api/products/{id}</code></li>
-    </ul>
-
-    <h2>Contributing</h2>
-    <p>Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.</p>
-
-    <h2>Contact</h2>
-    <p>Muhammad Saqib - <a href="https://github.com/MuhammadSaqib786" target="_blank">GitHub Profile</a></p>
-
-</body>
-
-</html>
